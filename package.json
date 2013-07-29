@@ -1,5 +1,5 @@
 {
-  "name": "Sunseeker",
+  "name": "raiseyourvoice",
   "version": "0.0.1",
   "dependencies": {
     "nodetime": ">= 0.8.13",
