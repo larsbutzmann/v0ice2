@@ -1,0 +1,25 @@
+{
+  "name": "Sunseeker",
+  "version": "0.0.1",
+  "dependencies": {
+    "nodetime": ">= 0.8.13",
+    "express": ">= 3.3.1",
+    "jade": ">= 0.32.0",
+    "mongoose": ">= 3.6.13",
+    "passport": ">= 0.1.17",
+    "passport-local": ">= 0.1.6",
+    "express-validator": ">= 0.6.0",
+    "passport-local-mongoose": ">= 0.2.4",
+    "connect-flash": ">= 0.1.1"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  },
+  "_comment": {
+    "mongodb": ">= 1.3.10",
+    "consolidate": ">= 0.9.1",
+    "handlebars": ">= 1.0.12",
+    "ejs": ">= 0.8.4"
+  }
+}
