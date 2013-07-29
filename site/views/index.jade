@@ -1,7 +1,40 @@
 !!!5
-html
+html(lang="en")
   head
     include includes/head
 
   body
-    h1 Hello World
+    div.container
+      div.row.text-center
+        h1 Welcome to v0ice
+      hr
+      div.row
+        div.col-lg-6.col-offset-3
+          form(action="/", method="post")
+            fieldset
+              legend Create example email
+              - function isEmptyObject(obj) {
+              -      var name;
+              -      for (name in obj) {
+              -        return false;
+              -      }
+              -      return true;
+              -    }
+              - if (isEmptyObject(errors) == false)
+                div.alert
+                  button.btn.close(data-dismiss="alert")
+                  p
+                    strong The following errors occured!
+                  - each error in errors
+                    p #{error.msg}
+              div.form-group
+                label(for="email") Email address
+                input.form-control#inputEmail(type="text", name="email", placeholder="Enter email")
+
+              div.form-group
+                label(for="inputText") Text
+                textarea.form-control(rows="3", name="inputText", placeholder="Leave empty for default email")
+              button.btn.btn-default(type="submit") Submit
+      hr
+      include includes/footer
+    include includes/scripts

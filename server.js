@@ -6,13 +6,13 @@ if(process.env.NODETIME_ACCOUNT_KEY) {
 }
 
 var application_root = __dirname,
-    express = require("express"),
-    expressValidator = require('express-validator'),
-    mongoose = require('mongoose'),
-    passport = require('passport'),
-    flash = require('connect-flash'),
-    jade = require('jade'),
-    LocalStrategy = require('passport-local').Strategy;
+  express = require("express"),
+  expressValidator = require('express-validator'),
+  mongoose = require('mongoose'),
+  passport = require('passport'),
+  flash = require('connect-flash'),
+  jade = require('jade'),
+  LocalStrategy = require('passport-local').Strategy;
 
 var app = express();
 

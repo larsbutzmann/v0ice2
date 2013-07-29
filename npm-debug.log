@@ -1,0 +1,136 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.2.32
+3 info using node@v0.10.12
+4 verbose node symlink /usr/local/bin/node
+5 verbose read json /Users/lars/Development/raiseyourvoice/package.json
+6 warn package.json Sunseeker@0.0.1 No repository field.
+7 warn package.json Sunseeker@0.0.1 No readme data.
+8 verbose readDependencies using package.json deps
+9 verbose install where, deps [ '/Users/lars/Development/raiseyourvoice',
+9 verbose install   [ 'nodetime',
+9 verbose install     'express',
+9 verbose install     'jade',
+9 verbose install     'mongoose',
+9 verbose install     'passport',
+9 verbose install     'passport-local',
+9 verbose install     'express-validator',
+9 verbose install     'passport-local-mongoose',
+9 verbose install     'connect-flash',
+9 verbose install     'sendgrid' ] ]
+10 verbose from cache /Users/lars/Development/raiseyourvoice/package.json
+11 info preinstall Sunseeker@0.0.1
+12 verbose read json /Users/lars/Development/raiseyourvoice/node_modules/connect-flash/package.json
+13 verbose read json /Users/lars/Development/raiseyourvoice/node_modules/express/package.json
+14 verbose read json /Users/lars/Development/raiseyourvoice/node_modules/express-validator/package.json
+15 verbose read json /Users/lars/Development/raiseyourvoice/node_modules/jade/package.json
+16 verbose read json /Users/lars/Development/raiseyourvoice/node_modules/mongoose/package.json
+17 verbose read json /Users/lars/Development/raiseyourvoice/node_modules/nodetime/package.json
+18 verbose read json /Users/lars/Development/raiseyourvoice/node_modules/passport/package.json
+19 verbose read json /Users/lars/Development/raiseyourvoice/node_modules/passport-local/package.json
+20 verbose read json /Users/lars/Development/raiseyourvoice/node_modules/passport-local-mongoose/package.json
+21 verbose read json /Users/lars/Development/raiseyourvoice/node_modules/sendgrid/package.json
+22 verbose from cache /Users/lars/Development/raiseyourvoice/package.json
+23 verbose readDependencies using package.json deps
+24 verbose from cache /Users/lars/Development/raiseyourvoice/node_modules/connect-flash/package.json
+25 verbose from cache /Users/lars/Development/raiseyourvoice/node_modules/express/package.json
+26 verbose from cache /Users/lars/Development/raiseyourvoice/node_modules/express-validator/package.json
+27 verbose from cache /Users/lars/Development/raiseyourvoice/node_modules/jade/package.json
+28 verbose from cache /Users/lars/Development/raiseyourvoice/node_modules/mongoose/package.json
+29 verbose from cache /Users/lars/Development/raiseyourvoice/node_modules/nodetime/package.json
+30 verbose from cache /Users/lars/Development/raiseyourvoice/node_modules/passport/package.json
+31 verbose from cache /Users/lars/Development/raiseyourvoice/node_modules/passport-local/package.json
+32 verbose from cache /Users/lars/Development/raiseyourvoice/node_modules/passport-local-mongoose/package.json
+33 verbose from cache /Users/lars/Development/raiseyourvoice/node_modules/sendgrid/package.json
+34 verbose already installed skipping jade@>= 0.32.0 /Users/lars/Development/raiseyourvoice
+35 verbose already installed skipping mongoose@>= 3.6.13 /Users/lars/Development/raiseyourvoice
+36 verbose already installed skipping passport@>= 0.1.17 /Users/lars/Development/raiseyourvoice
+37 verbose already installed skipping express-validator@>= 0.6.0 /Users/lars/Development/raiseyourvoice
+38 verbose already installed skipping passport-local@>= 0.1.6 /Users/lars/Development/raiseyourvoice
+39 verbose already installed skipping passport-local-mongoose@>= 0.2.4 /Users/lars/Development/raiseyourvoice
+40 verbose already installed skipping connect-flash@>= 0.1.1 /Users/lars/Development/raiseyourvoice
+41 verbose cache add [ 'sendgrid@>= 0.3.0', null ]
+42 verbose cache add name=undefined spec="sendgrid@>= 0.3.0" args=["sendgrid@>= 0.3.0",null]
+43 verbose parsed url { protocol: null,
+43 verbose parsed url   slashes: null,
+43 verbose parsed url   auth: null,
+43 verbose parsed url   host: null,
+43 verbose parsed url   port: null,
+43 verbose parsed url   hostname: null,
+43 verbose parsed url   hash: null,
+43 verbose parsed url   search: null,
+43 verbose parsed url   query: null,
+43 verbose parsed url   pathname: 'sendgrid@%3E=%200.3.0',
+43 verbose parsed url   path: 'sendgrid@%3E=%200.3.0',
+43 verbose parsed url   href: 'sendgrid@%3E=%200.3.0' }
+44 verbose cache add name="sendgrid" spec=">= 0.3.0" args=["sendgrid",">= 0.3.0"]
+45 verbose parsed url { protocol: null,
+45 verbose parsed url   slashes: null,
+45 verbose parsed url   auth: null,
+45 verbose parsed url   host: null,
+45 verbose parsed url   port: null,
+45 verbose parsed url   hostname: null,
+45 verbose parsed url   hash: null,
+45 verbose parsed url   search: null,
+45 verbose parsed url   query: null,
+45 verbose parsed url   pathname: '%3E=%200.3.0',
+45 verbose parsed url   path: '%3E=%200.3.0',
+45 verbose parsed url   href: '%3E=%200.3.0' }
+46 verbose addNamed [ 'sendgrid', '>= 0.3.0' ]
+47 verbose addNamed [ null, '>=0.3.0' ]
+48 verbose already installed skipping nodetime@>= 0.8.13 /Users/lars/Development/raiseyourvoice
+49 verbose already installed skipping express@>= 3.3.1 /Users/lars/Development/raiseyourvoice
+50 silly lockFile b1a39059-sendgrid-0-3-0 sendgrid@>= 0.3.0
+51 verbose lock sendgrid@>= 0.3.0 /Users/lars/.npm/b1a39059-sendgrid-0-3-0.lock
+52 silly addNameRange { name: 'sendgrid', range: '>=0.3.0', hasData: false }
+53 verbose url raw sendgrid
+54 verbose url resolving [ 'https://registry.npmjs.org/', './sendgrid' ]
+55 verbose url resolved https://registry.npmjs.org/sendgrid
+56 info trying registry request attempt 1 at 23:32:27
+57 verbose etag "2VK36AUQP1VQL9CKQY4J04NAS"
+58 http GET https://registry.npmjs.org/sendgrid
+59 http 304 https://registry.npmjs.org/sendgrid
+60 silly registry.get cb [ 304,
+60 silly registry.get   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+60 silly registry.get     etag: '"2VK36AUQP1VQL9CKQY4J04NAS"',
+60 silly registry.get     date: 'Mon, 29 Jul 2013 21:32:28 GMT',
+60 silly registry.get     'content-length': '0' } ]
+61 verbose etag sendgrid from cache
+62 silly addNameRange number 2 { name: 'sendgrid', range: '>=0.3.0', hasData: true }
+63 silly addNameRange versions [ 'sendgrid',
+63 silly addNameRange   [ '0.1.0-2',
+63 silly addNameRange     '0.2.0',
+63 silly addNameRange     '0.2.1',
+63 silly addNameRange     '0.2.2',
+63 silly addNameRange     '0.2.3',
+63 silly addNameRange     '0.2.4',
+63 silly addNameRange     '0.2.5',
+63 silly addNameRange     '0.2.6',
+63 silly addNameRange     '0.2.7',
+63 silly addNameRange     '0.2.8',
+63 silly addNameRange     '0.2.9',
+63 silly addNameRange     '0.2.10',
+63 silly addNameRange     '0.2.11',
+63 silly addNameRange     '0.3.0-rc.1.0',
+63 silly addNameRange     '0.2.12',
+63 silly addNameRange     '0.3.0-rc.1.1' ] ]
+64 silly lockFile b1a39059-sendgrid-0-3-0 sendgrid@>= 0.3.0
+65 silly lockFile b1a39059-sendgrid-0-3-0 sendgrid@>= 0.3.0
+66 error Error: No compatible version found: sendgrid@'>=0.3.0'
+66 error Valid install targets:
+66 error ["0.1.0-2","0.2.0","0.2.1","0.2.2","0.2.3","0.2.4","0.2.5","0.2.6","0.2.7","0.2.8","0.2.9","0.2.10","0.2.11","0.3.0-rc.1.0","0.2.12","0.3.0-rc.1.1"]
+66 error     at installTargetsError (/usr/local/Cellar/node/0.8.14/lib/node_modules/npm/lib/cache.js:719:10)
+66 error     at next (/usr/local/Cellar/node/0.8.14/lib/node_modules/npm/lib/cache.js:698:17)
+66 error     at /usr/local/Cellar/node/0.8.14/lib/node_modules/npm/lib/cache.js:678:5
+66 error     at saved (/usr/local/Cellar/node/0.8.14/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:138:7)
+66 error     at Object.oncomplete (fs.js:107:15)
+67 error If you need help, you may report this log at:
+67 error     <http://github.com/isaacs/npm/issues>
+67 error or email it to:
+67 error     <npm-@googlegroups.com>
+68 error System Darwin 11.4.2
+69 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+70 error cwd /Users/lars/Development/raiseyourvoice
+71 error node -v v0.10.12
+72 error npm -v 1.2.32
+73 verbose exit [ 1, true ]

@@ -1,5 +1,7 @@
 var passport = require('passport'),
-  UserModel = require('./model/user.js');
+  UserModel = require('./model/user.js'),
+  sendgrid = require('sendgrid')("app17202825@heroku.com", "koyr9c8e");
+
 
 module.exports = function (app) {
 
@@ -20,6 +22,33 @@ module.exports = function (app) {
       active: "home",
       user: req.user
     });
+  });
+
+  app.post('/', function (req, res) {
+    req.assert('email', 'required').notEmpty();
+    req.assert('email', 'valid email required').isEmail();
+
+    var errors = req.validationErrors();
+
+    if (!errors) {
+      var emailText = '<html> <head> <meta http-equiv="content-type" content="text/html; charset=ISO-8859-15"> </head> <body text="#000000" bgcolor="#FFFFFF"> Wir lieben Feedback! <br> <div class="moz-forward-container"><br> <video style="display: block;" autoplay="autoplay" clipid="532383" poster="https://sc.liveclicker.net/service/clip?kind=poster&amp;ID=532383&amp;type=1" controls="controls" src="https://sc.liveclicker.net/service/clip?kind=video&amp;ID=532383&amp;type=1" height="180" width="320"><a moz-do-not-send="true" href="http://em.liveclicker.net/service/clip?kind=clickthrough&amp;ID=532383&amp;type=1" alt="Redirect"><img moz-do-not-send="true" src="cid:part1.07080905.09000202@gmail.com" alt="Video clip" style="display:block;" height="180" width="320" border="0"></a></video><br> Sag uns deine Meinung!<br> </div> <br> </body> </html>';
+      sendgrid.send({
+        to: req.body.email,
+        // toname: 'Lars Butzmann',
+        from: 'order@v0ice.de',
+        fromname: 'v0ice Inc.',
+        subject: 'Example email with HTML5 video',
+        text: 'Sending email with NodeJS through SendGrid!',
+        html: (req.body.inputText !== '') ? req.body.inputText : emailText
+      });
+
+      res.redirect('/');
+    } else {
+      res.render('index', {
+        message: '',
+        errors: errors
+      });
+    }
   });
 
   app.get('/register', function(req, res) {
