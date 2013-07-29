@@ -1,6 +1,6 @@
 var passport = require('passport'),
   UserModel = require('./model/user.js'),
-  sendgrid = require('sendgrid')("app17202825@heroku.com", "koyr9c8e");
+  sendgrid = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD);
 
 
 module.exports = function (app) {
