@@ -24,6 +24,13 @@ module.exports = function (app) {
     });
   });
 
+  app.get('/record', function (req, res) {
+    res.render('record', {
+      active: "home",
+      user: req.user
+    });
+  });
+
   app.post('/', function (req, res) {
     req.assert('email', 'required').notEmpty();
     req.assert('email', 'valid email required').isEmail();

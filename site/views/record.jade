@@ -1,0 +1,21 @@
+!!!5
+html(lang="en")
+  head
+    include includes/head
+
+  body
+    div.container
+      div.row.text-center
+        h1 Welcome to v0ice
+      hr
+      div.row
+        div.col-lg-6.col-offset-3
+          button.btn.btn-default#record-btn Record
+          button.btn.btn-default#stop-btn Stop
+      div.row
+        div.col-lg-6.col-offset-3
+          ul#recordings
+
+      hr
+      include includes/footer
+    include includes/scripts
