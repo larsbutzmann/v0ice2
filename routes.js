@@ -1,7 +1,21 @@
 var passport = require('passport'),
   UserModel = require('./model/user.js'),
+  AWS = require('aws-sdk'),
+  fs = require("fs"),
   sendgrid = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD);
 
+AWS.config.loadFromPath('./config.json');
+
+// Set your region for future requests.
+AWS.config.update({region: 'eu-west-1'});
+
+var s3 = new AWS.S3();
+s3.listBuckets(function(err, data) {
+  for (var index in data.Buckets) {
+    var bucket = data.Buckets[index];
+    console.log("Bucket: ", bucket.Name, ' : ', bucket.CreationDate);
+  }
+});
 
 module.exports = function (app) {
 
@@ -25,6 +39,59 @@ module.exports = function (app) {
   });
 
   app.get('/record', function (req, res) {
+    res.render('record', {
+      active: "record",
+      user: req.user
+    });
+  });
+
+  // list all available files in the system
+  app.get('/list', function (req, res) {
+    var params = {
+      Bucket: "raiseyourvoice2",
+      Prefix: "audio_files/audio"
+    };
+
+    s3.listObjects(params, function(err, data) {
+      if (err) {
+        console.log("Error uploading data: ", err);
+      } else {
+
+        data = data.Contents;
+        data = data.map(function(file) {
+          var dateString;
+          file.Key = "https://s3-eu-west-1.amazonaws.com/raiseyourvoice2/" + file.Key;
+          dateString = new Date(file.LastModified).toGMTString();
+          file.DateTime = dateString.substring(0, dateString.length-4);
+          return file;
+        });
+
+        res.render('list', {
+          active: "list",
+          user: req.user,
+          audioFiles: data.reverse(),
+        });
+      }
+    });
+  });
+
+  app.post('/record', function (req, res) {
+    if (req.files.hasOwnProperty("user_audio_blob")) {
+      fs.readFile(req.files.user_audio_blob.path, function (err, data) {
+        var s3data = {
+          Bucket: 'raiseyourvoice2',
+          Key: "audio_files/audio_" + new Date().toISOString(),
+          Body: data,
+          ACL: "public-read"
+        };
+        s3.putObject(s3data, function(err, data) {
+          if (err) {
+            console.log("Error uploading data: ", err);
+          }
+        });
+      });
+    }
+
     res.render('record', {
       active: "home",
       user: req.user

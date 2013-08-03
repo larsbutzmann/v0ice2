@@ -5,13 +5,22 @@ html(lang="en")
 
   body
     div.container
+
+      include includes/header
+
       div.row.text-center
         h1 Welcome to v0ice
+
       hr
       div.row
-        div.col-lg-6.col-offset-3
+        div.col-lg-6.col-offset-5
           button.btn.btn-default#record-btn Record
-          button.btn.btn-default#stop-btn Stop
+          button.btn.btn-default#stop-btn(disabled) Stop
+      div.row
+        div.col-lg-6.col-offset-5
+          img#onair(src="img/onair.png", width="150", style="display: none")
+
+      hr
       div.row
         div.col-lg-6.col-offset-3
           ul#recordings
@@ -19,3 +28,4 @@ html(lang="en")
       hr
       include includes/footer
     include includes/scripts
+    script(type='text/javascript', src='js/voicerecorder.js')
