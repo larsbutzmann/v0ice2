@@ -18,7 +18,8 @@ html(lang="en")
               li
                 span #{file.DateTime}
                 span
-                  audio(src="#{file.Key}", controls=true, type="audio/wav")
+                  audio(controls, preload)
+                    source(src="#{file.Key}")
 
       hr
       include includes/footer

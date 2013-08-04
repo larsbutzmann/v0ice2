@@ -4,7 +4,7 @@ var passport = require('passport'),
   fs = require("fs"),
   sendgrid = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD);
 
-// AWS.config.loadFromPath('./config.json');
+AWS.config.loadFromPath('./config.json');
 
 // Set your region for future requests.
 AWS.config.update({region: 'eu-west-1'});
@@ -80,7 +80,7 @@ module.exports = function (app) {
       fs.readFile(req.files.user_audio_blob.path, function (err, data) {
         var s3data = {
           Bucket: 'raiseyourvoice2',
-          Key: "audio_files/audio_" + new Date().toISOString(),
+          Key: "audio_files/audio_" + new Date().toISOString() + ".wav",
           Body: data,
           ACL: "public-read"
         };
