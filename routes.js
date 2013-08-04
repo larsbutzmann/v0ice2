@@ -4,7 +4,7 @@ var passport = require('passport'),
   fs = require("fs"),
   sendgrid = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD);
 
-AWS.config.loadFromPath('./config.json');
+// AWS.config.loadFromPath('./config.json');
 
 // Set your region for future requests.
 AWS.config.update({region: 'eu-west-1'});
