@@ -1,3 +1,16 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #f58913;
+}
+
+#container {
+   min-height: 100%;
+   position: relative;
+}
+
 button {
     margin-right: 20px;
 }
@@ -6,6 +19,24 @@ ul {
     list-style-type: none;
 }
 
+.brand {
+    min-width: 300px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#logo {
+    height: 50px;
+}
+
 #recordings li {
     margin-bottom: 25px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    margin-top: 50px;
 }

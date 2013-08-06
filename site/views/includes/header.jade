@@ -1,17 +1,20 @@
-div.navbar
-  a.navbar-brand(href="/") Cosife
-  ul.nav.navbar-nav
-    - var obj = { 'home':'Home', 'record':'Record', 'list': 'List' }
-      - each val, key in obj
-        - if (active == key)
-          li.active
-            - if (key == 'home')
-              a(href="/") #{val}
+div.fab-bg
+  div.navbar
+    div.container
+      a.navbar-brand.brand(href="/")
+        img#logo(src="img/logo.png")
+      ul.nav.navbar-nav
+        - var obj = { 'home':'Home', 'record':'Record', 'list': 'List' }
+          - each val, key in obj
+            - if (active == key)
+              li.active
+                - if (key == 'home')
+                  a(href="/") #{val}
+                - else
+                  a(href="/#{key}") #{val}
             - else
-              a(href="/#{key}") #{val}
-        - else
-          li
-            - if (key == 'home')
-              a(href="/") #{val}
-            - else
-              a(href="/#{key}") #{val}
+              li
+                - if (key == 'home')
+                  a(href="/") #{val}
+                - else
+                  a(href="/#{key}") #{val}

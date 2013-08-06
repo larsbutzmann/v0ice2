@@ -2646,11 +2646,11 @@ button.close {
 
 .navbar {
   position: relative;
-  min-height: 50px;
+  min-height: 60px;
   padding-right: 15px;
   padding-left: 15px;
   margin-bottom: 20px;
-  background-color: #eeeeee;
+  background-color: #ffffff;
   border-radius: 4px;
 }
 
@@ -2680,11 +2680,12 @@ button.close {
 }
 
 .navbar-nav > li > a {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   line-height: 20px;
-  color: #777777;
+  color: #555555;
   border-radius: 4px;
+  font-size: 18px;
 }
 
 .navbar-nav > li > a:hover,
@@ -2697,7 +2698,7 @@ button.close {
 .navbar-nav > .active > a:hover,
 .navbar-nav > .active > a:focus {
   color: #555555;
-  background-color: #d5d5d5;
+  background-color: #f58913;
 }
 
 .navbar-nav > .disabled > a,
@@ -2742,7 +2743,7 @@ button.close {
   font-size: 18px;
   font-weight: 500;
   line-height: 20px;
-  color: #777777;
+  color: #555555;
   text-align: center;
 }
 
@@ -2933,6 +2934,8 @@ button.close {
   }
   .navbar-nav > li {
     float: left;
+    min-width: 100px;
+    text-align: center;
   }
   .navbar-nav > li > a {
     border-radius: 0;

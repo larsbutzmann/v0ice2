@@ -4,28 +4,24 @@ html(lang="en")
     include includes/head
 
   body
-    div.container
+    div#container
 
       include includes/header
 
-      div.row.text-center
-        h1 Welcome to v0ice
+      div.container
+        div.row
+          div.col-lg-6.col-offset-5
+            button.btn.btn-default#record-btn Record
+            button.btn.btn-default#stop-btn(disabled) Stop
+        div.row
+          div.col-lg-6.col-offset-5
+            img#onair(src="img/onair.png", width="150", style="display: none")
 
-      hr
-      div.row
-        div.col-lg-6.col-offset-5
-          button.btn.btn-default#record-btn Record
-          button.btn.btn-default#stop-btn(disabled) Stop
-      div.row
-        div.col-lg-6.col-offset-5
-          img#onair(src="img/onair.png", width="150", style="display: none")
+        hr
+        div.row
+          div.col-lg-6.col-offset-3
+            ul#recordings
 
-      hr
-      div.row
-        div.col-lg-6.col-offset-3
-          ul#recordings
-
-      hr
       include includes/footer
     include includes/scripts
     script(type='text/javascript', src='js/voicerecorder.js')

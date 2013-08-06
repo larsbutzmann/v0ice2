@@ -4,23 +4,20 @@ html(lang="en")
     include includes/head
 
   body
-    div.container
+    div#container
 
       include includes/header
 
-      div.row.text-center
-        h1 Welcome to v0ice
-      hr
-      div.row
-        div.col-lg-6.col-offset-3
-          ul#recordings
-            - each file in audioFiles
-              li
-                span #{file.DateTime}
-                span
-                  audio(controls, preload)
-                    source(src="#{file.Key}")
+      div.container
+        div.row
+          div.col-lg-6.col-offset-3
+            ul#recordings
+              - each file in audioFiles
+                li
+                  span #{file.DateTime}
+                  span
+                    audio(controls, preload)
+                      source(src="#{file.Key}")
 
-      hr
       include includes/footer
     include includes/scripts
