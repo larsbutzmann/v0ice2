@@ -25,6 +25,24 @@ ul {
     padding-bottom: 5px;
 }
 
+#center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -62px;
+    margin-left: -284px;
+    width: 568px;
+    height: 114px;
+}
+
+.white {
+    background-color: #ffffff;
+}
+
+.color {
+    background-color: #f58913;
+}
+
 #logo {
     height: 50px;
 }
