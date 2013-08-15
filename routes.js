@@ -37,6 +37,12 @@ module.exports = function (app) {
     });
   });
 
+  app.get('/video', function (req, res) {
+    res.render('index', {
+      user: req.user
+    });
+  });
+
   app.get('/mail', function (req, res) {
     res.render('mail', {
       active: "home",
